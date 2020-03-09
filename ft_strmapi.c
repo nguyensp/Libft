@@ -6,7 +6,7 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 15:11:32 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/06 15:09:04 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/09 15:20:38 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		s++;
 		i++;
 	}
+	fresh[i] = '\0';
 	return (fresh);
 }
