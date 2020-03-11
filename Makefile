@@ -6,7 +6,7 @@
 #    By: panguyen <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 14:36:14 by panguyen          #+#    #+#              #
-#    Updated: 2020/03/11 15:41:37 by panguyen         ###   ########.fr        #
+#    Updated: 2020/03/11 15:51:20 by panguyen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,11 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) libft.h
-	@gcc -Wall -Wextra -Werror -c $(SRCS)
 	@ar -rcs $(NAME) $(OBJS)
 	@ranlib $(NAME)
+
+%.o: %.c
+	@gcc -Wall -Wextra -Werror -c $< -o $@
 
 clean:
 	@rm -f $(OBJS)
