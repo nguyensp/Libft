@@ -6,7 +6,7 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 16:39:58 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/09 16:54:43 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:12:19 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	char	*start;
 	char	*pattern;
 
+	if (needle[0] == '\0')
+		return ((char*)haystack);
 	while (*haystack)
 	{
 		start = (char*)haystack;
