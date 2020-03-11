@@ -6,13 +6,13 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 16:25:50 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/11 16:28:01 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:52:59 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(char c)
+int	ft_islower(int c)
 {
 	return ((c >= 'a' && c <= 'z'));
 }

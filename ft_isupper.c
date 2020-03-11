@@ -6,13 +6,13 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 16:28:15 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/11 16:28:59 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:53:10 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(char c)
+int	ft_isupper(int c)
 {
 	return ((c >= 'A' && c <= 'Z'));
 }

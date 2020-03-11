@@ -6,7 +6,7 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 13:02:22 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/11 16:45:42 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:53:58 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int					ft_islower(char c);
-int					ft_isupper(char c);
+int					ft_islower(int c);
+int					ft_isupper(int c);
 int					ft_isprime(int nbr);
 void				ft_swap(int *a, int *b);
 t_list				*ft_revlst(t_list *lst);
