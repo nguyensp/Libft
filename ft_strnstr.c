@@ -6,7 +6,7 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 14:34:54 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/09 15:56:20 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/09 17:05:48 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t n)
 	size_t	j;
 
 	i = 0;
+	if (ndl == NULL)
+		return ((char*)hay);
 	while (*hay && i < n)
 	{
 		start = (char*)hay;

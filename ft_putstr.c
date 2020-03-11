@@ -6,7 +6,7 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 21:00:27 by panguyen          #+#    #+#             */
-/*   Updated: 2020/02/29 21:10:05 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/09 16:30:38 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
+	if (s == NULL)
+		return ;
 	while (*s)
 	{
 		ft_putchar(*s);

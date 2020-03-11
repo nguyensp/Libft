@@ -6,7 +6,7 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 15:45:04 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/06 22:18:31 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/09 16:26:49 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_strtrim(char const *s)
 
 	str = (char*)s;
 	bws = 0;
+	if (s == NULL)
+		return (NULL);
 	while (is_whitespace(*str))
 	{
 		str++;

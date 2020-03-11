@@ -6,7 +6,7 @@
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 19:53:14 by panguyen          #+#    #+#             */
-/*   Updated: 2020/02/29 20:17:39 by panguyen         ###   ########.fr       */
+/*   Updated: 2020/03/09 16:55:42 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ char		*ft_itoa(int nbr)
 	char	*result;
 
 	len = nbr_len(nbr);
-	result = malloc(sizeof(char) * (len + 1));
+	if (!(result = (char*)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
 	result[len] = '\0';
 	if (nbr < 0)
 		result[0] = '-';
