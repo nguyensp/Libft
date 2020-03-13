@@ -17,7 +17,7 @@ void	*ft_memalloc(size_t size)
 	int		*mem;
 	size_t	i;
 
-	if (!(mem = malloc(sizeof(int) * size)))
+	if (!(mem = (int*)malloc(sizeof(int) * size)))
 		return (NULL);
 	i = 0;
 	while (i < size)
