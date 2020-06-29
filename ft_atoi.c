@@ -5,17 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/29 19:29:26 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/07 20:09:22 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 21:19:23 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 21:19:32 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_atoi(char *str)
 {
-	int	sign;
-	int	result;
+	int sign;
+	int result;
 
 	sign = 1;
 	result = 0;

@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/11 16:28:15 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/11 16:53:10 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 14:57:44 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 22:43:42 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	return ((c >= 'A' && c <= 'Z'));
+	t_list *iter;
+
+	if (!(*lst))
+		*lst = new;
+	else
+	{
+		iter = *lst;
+		while (iter->next)
+			iter = iter->next;
+		iter->next = new;
+	}
 }

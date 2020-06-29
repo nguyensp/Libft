@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 14:26:07 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/06 14:40:23 by panguyen         ###   ########.fr       */
+/*   Created: 2020/05/12 20:45:01 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/29 06:01:54 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	t_list	*current;
-
 	if (lst == NULL || f == NULL)
 		return ;
-	current = lst;
-	while (current)
+	while (lst)
 	{
-		f(current);
-		current = current->next;
+		f(lst->content);
+		lst = lst->next;
 	}
 }

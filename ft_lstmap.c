@@ -5,22 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 14:48:07 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/06 15:29:58 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 15:01:56 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/29 06:23:50 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new;
+	t_list *head;
+	t_list *iter;
 
-	new = NULL;
-	if (lst)
+	if (lst == NULL || f == NULL || del == NULL)
+		return (NULL);
+	if (!(iter = ft_lstnew(f(lst->content))))
+		return (NULL);
+	head = iter;
+	while (lst)
 	{
-		new = f(lst);
-		new->next = ft_lstmap(lst->next, f);
+		if (lst->next)
+		{
+			if (!(iter->next = ft_lstnew(f(lst->next->content))))
+			{
+				ft_lstclear(&head, del);
+				return (0);
+			}
+			iter = iter->next;
+		}
+		lst = lst->next;
 	}
-	return (new);
+	iter->next = NULL;
+	return (head);
 }

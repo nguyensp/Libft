@@ -5,53 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/29 19:53:14 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/09 16:55:42 by panguyen         ###   ########.fr       */
+/*   Created: 2020/04/24 18:34:28 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/29 00:16:55 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_abs(int nbr)
+static int	ft_abs(int n)
 {
-	if (nbr < 0)
-		nbr = -nbr;
-	return (nbr);
+	if (n < 0)
+		n = -n;
+	return (n);
 }
 
-static int	nbr_len(int nbr)
+static int	nbr_len(int n)
 {
 	int	len;
 
 	len = 0;
-	if (nbr <= 0)
+	if (n <= 0)
 		len++;
-	while (nbr != 0)
+	while (n != 0)
 	{
 		len++;
-		nbr = nbr / 10;
+		n = n / 10;
 	}
 	return (len);
 }
 
-char		*ft_itoa(int nbr)
+char		*ft_itoa(int n)
 {
 	int		len;
 	char	*result;
 
-	len = nbr_len(nbr);
+	len = nbr_len(n);
 	if (!(result = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	result[len] = '\0';
-	if (nbr < 0)
+	if (n < 0)
 		result[0] = '-';
-	else if (nbr == 0)
+	else if (n == 0)
 		result[0] = '0';
-	while (nbr != 0)
+	while (n != 0)
 	{
 		len--;
-		result[len] = ft_abs(nbr % 10) + '0';
-		nbr = nbr / 10;
+		result[len] = ft_abs(n % 10) + '0';
+		n = n / 10;
 	}
 	return (result);
 }

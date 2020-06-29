@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/01 18:09:28 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/09 17:04:14 by panguyen         ###   ########.fr       */
+/*   Created: 2020/04/18 17:17:37 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 22:32:56 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned char *d;
+	unsigned char *s;
 
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;

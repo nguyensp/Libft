@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/09 10:46:22 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/09 16:33:26 by panguyen         ###   ########.fr       */
+/*   Created: 2020/04/24 18:28:00 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/29 00:14:50 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static size_t	word_count(char const *str, char c)
 	return (count);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**word_array;
 	size_t	w_count;
@@ -54,7 +54,7 @@ char			**ft_strsplit(char const *s, char c)
 			i++;
 			w_len++;
 		}
-		word_array[j++] = ft_strsub(s, i - w_len, w_len);
+		word_array[j++] = ft_substr(s, i - w_len, w_len);
 	}
 	word_array[j] = NULL;
 	return (word_array);

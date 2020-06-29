@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/01 16:39:58 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/11 16:12:19 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 14:56:37 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 22:50:32 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+t_list	*ft_lstlast(t_list *lst)
 {
-	char	*start;
-	char	*pattern;
-
-	if (needle[0] == '\0')
-		return ((char*)haystack);
-	while (*haystack)
+	if (!lst)
+		return (lst);
+	else
 	{
-		start = (char*)haystack;
-		pattern = (char*)needle;
-		while (*haystack && *pattern && *haystack == *pattern)
-		{
-			haystack++;
-			pattern++;
-		}
-		if (!*pattern)
-		{
-			return (start);
-		}
-		haystack = start + 1;
+		while (lst->next)
+			lst = lst->next;
 	}
-	return (0);
+	return (lst);
 }

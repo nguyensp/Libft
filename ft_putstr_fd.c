@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/01 17:45:01 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/09 16:31:34 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 14:47:48 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 23:05:47 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (s == NULL)
 		return ;

@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 13:53:36 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/04 14:15:52 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 14:55:45 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 23:05:23 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+int	ft_lstsize(t_list *list)
 {
-	if (ap == NULL)
-		return ;
-	free(*ap);
-	*ap = NULL;
+	int	size;
+
+	size = 0;
+	while (list != NULL)
+	{
+		list = list->next;
+		size++;
+	}
+	return (size);
 }

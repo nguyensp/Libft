@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/01 18:52:28 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/06 23:16:05 by panguyen         ###   ########.fr       */
+/*   Created: 2020/04/20 20:15:18 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 23:03:28 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *str1;
-	unsigned char *str2;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	if (n == 0)
 		return (0);

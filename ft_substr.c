@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 15:21:34 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/09 16:59:42 by panguyen         ###   ########.fr       */
+/*   Created: 2020/04/24 17:08:15 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 22:09:03 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (s1 == NULL || s2 == NULL)
-		return (0);
-	while (n > 0)
+	char	*fresh;
+	size_t	i;
+
+	if (!s || !(fresh = (char*)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	i = 0;
+	while (s[start] && i < len)
 	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-		n--;
+		fresh[i] = s[start];
+		start++;
+		i++;
 	}
-	return (1);
+	fresh[i] = '\0';
+	return (fresh);
 }

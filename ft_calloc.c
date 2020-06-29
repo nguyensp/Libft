@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 13:39:47 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/04 13:53:01 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 14:35:21 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/29 11:35:51 by panguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int		*mem;
-	size_t	i;
+	char *fresh;
 
-	if (!(mem = (int*)malloc(sizeof(int) * size)))
+	if (!(fresh = (char*)malloc(size * count)))
 		return (NULL);
-	i = 0;
-	while (i < size)
-	{
-		mem[i] = 0;
-		i++;
-	}
-	return ((void*)mem);
+	ft_memset(fresh, 0, count * size);
+	return (fresh);
 }

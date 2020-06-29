@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 12:42:28 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/06 19:24:08 by panguyen         ###   ########.fr       */
+/*   Created: 2020/04/20 20:17:34 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 22:19:28 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
 	size_t len;
 

@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 14:29:44 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/06 14:39:06 by panguyen         ###   ########.fr       */
+/*   Created: 2020/05/03 20:21:29 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 22:45:41 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (alst == NULL || del == NULL)
+	if (lst == NULL || del == NULL)
 		return ;
-	del((*alst)->content, (*alst)->content_size);
-	free(*alst);
-	*alst = NULL;
+	del(lst);
+	free(lst);
+	lst = NULL;
 }

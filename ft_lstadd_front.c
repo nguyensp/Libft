@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 14:16:46 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/09 16:56:39 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 14:54:07 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/28 22:44:31 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (s == NULL)
-		return ;
-	while (*s)
-	{
-		*s = '\0';
-		s++;
-	}
+	new->next = *lst;
+	*lst = new;
 }

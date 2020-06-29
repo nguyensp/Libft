@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: panguyen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/01 17:48:30 by panguyen          #+#    #+#             */
-/*   Updated: 2020/03/01 17:51:04 by panguyen         ###   ########.fr       */
+/*   Created: 2020/06/28 14:48:49 by panguyen          #+#    #+#             */
+/*   Updated: 2020/06/29 03:14:35 by psngyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
